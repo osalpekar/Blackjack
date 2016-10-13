@@ -2,7 +2,7 @@ import random
 
 #outline the player Class
 class Player():
-
+        ACE_NUM = 100
 	#simulating a suit where 1 reps ace and 11-13 rep jack, queen, and king respectively
 	deck = [i for i in range(1,14)]
 	#frequency_deck maps cards to the number of those left in the deck
@@ -38,7 +38,7 @@ class Player():
 			value = 10
 		elif card == 1:
 			temp_string = 'ace'
-			value = 100 #placeholder for ace
+			value = ACE_NUM #placeholder for ace
 		else:
 			temp_string = str(card)
 			value = card
@@ -66,13 +66,13 @@ class Player():
 	def optimize(self):
 		counter = 0
 		for item in self.value_hand:
-			if item == 100:
+			if item == ACE_NUM:
 				counter += 1
 		
-		if 100 in self.value_hand:
+		if ACE_NUM in self.value_hand:
 			#aces present in hand
 			i = 0
-			self.score = sum(self.value_hand) - (100 * counter)
+			self.score = sum(self.value_hand) - (ACE_NUM * counter)
 
 			#accounting for fact that there may be multiple aces in hand
 			while (i < counter):
