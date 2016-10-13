@@ -35,7 +35,7 @@ def play():
 		
 		'''
 		determining whose turn it is based on
-		alternating turns and who is still playing
+		alternating turns and who is still playing the game
 		'''
 
 		if player1.active and player2.active:
