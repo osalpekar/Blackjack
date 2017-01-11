@@ -1,0 +1,6 @@
+#Python files
+*.pyc
+*.swp
+
+#OS Files
+.DS_Store
